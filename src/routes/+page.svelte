@@ -90,6 +90,8 @@
 
     const year = interactiveYears['2024'] || []
 
+    const tmpYear = []
+
     if (Array.isArray(data) && data.length) {
       let pushed = false
 
@@ -142,17 +144,18 @@
             },
           }
 
-          year.push(item)
+          tmpYear.push(item)
           pushed = true
         }
       }))
 
       if (pushed) {
-        interactiveYears['2024'] = year.sort((a, b) => parseInt(a.id) < parseInt(b.id) ? -1 : 1).map((a, i) => {
+        interactiveYears['2024'] = tmpYear.sort((a, b) => parseInt(a.id) < parseInt(b.id) ? -1 : 1).map((a, i) => {
           a.name = `Medienwerkstatt Wien ${i + 1}`
-          return a
+          a.title = a.name
+          return { ...a }
         })
-        // console.log(interactiveYears['2024'].map(a => [a.name, a.id]))
+        console.log(interactiveYears['2024'].map(a => `${a.name}, ${a.id}`))
       }
     }
 
