@@ -121,6 +121,14 @@
               oscFile,
               video: `https://live.artificialmuseum.com/data/video/${id}.mp4`,
 
+              cam: {
+                y: 1.7,
+              },
+
+              lookAt: {
+                y: 1.7,
+              },
+
               record3d: {
                 ...defaultArtifact.config.record3d,
                 ...onlineSettings.config.record3d,
@@ -137,7 +145,7 @@
                 depthScale: '1',
                 sizeAttenuation: '3.0',
 
-                hueRedReducer: '0.7',
+                hueRedReducer: '0.0',
               },
 
               shadowPlane: false,
@@ -155,7 +163,7 @@
           a.title = a.name
           return { ...a }
         })
-        // console.log(interactiveYears['2024'].map(a => `${a.name}, ${a.id}`))
+        console.log(interactiveYears['2024'])
       }
     }
 
