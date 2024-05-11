@@ -155,7 +155,7 @@
           a.title = a.name
           return { ...a }
         })
-        console.log(interactiveYears['2024'].map(a => `${a.name}, ${a.id}`))
+        // console.log(interactiveYears['2024'].map(a => `${a.name}, ${a.id}`))
       }
     }
 
