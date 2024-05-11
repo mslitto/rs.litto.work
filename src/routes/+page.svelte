@@ -142,15 +142,17 @@
             },
           }
 
-          console.log('item', item)
-
           year.push(item)
           pushed = true
         }
       }))
 
       if (pushed) {
-        interactiveYears['2024'] = year.sort((a, b) => parseInt(a.id) < parseInt(b.id) ? -1 : 1)
+        interactiveYears['2024'] = year.sort((a, b) => parseInt(a.id) < parseInt(b.id) ? -1 : 1).map((a, i) => {
+          a.name = `Medienwerkstatt Wien ${i + 1}`
+          return a
+        })
+        // console.log(interactiveYears['2024'].map(a => [a.name, a.id]))
       }
     }
 
