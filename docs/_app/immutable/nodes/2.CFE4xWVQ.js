@@ -1,0 +1,1 @@
+import{P as m}from"../chunks/vendor.BD790YXE.js";export{m as component};
