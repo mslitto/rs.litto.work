@@ -122,9 +122,10 @@
               record3d: {
                 ...defaultArtifact.config.record3d,
                 ...onlineSettings.config.record3d,
+
                 scale: '1.0',
                 ptSize: '1.2',
-                 filterSize: '0',
+                filterSize: '0',
                 minDepth: '0.1',
                 maxDepth: '5.0',
                 depthThresholdFilter: '2.5',
@@ -134,7 +135,7 @@
                 depthScale: '1',
                 sizeAttenuation: '3.0',
 
-                hueRedReducer: '0.2',
+                hueRedReducer: '0.7',
               },
 
               shadowPlane: false,
