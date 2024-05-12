@@ -755,7 +755,7 @@ export const artifacts: Artifact[] = [
     title: 'Medienwerkstatt Wien 1',
 
     config: {
-      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       slug: 'medienwerkstattwien1',
@@ -814,7 +814,7 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
 
     config: {
-      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -873,7 +873,7 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -932,7 +932,8 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
     config: {
       slug: 'medienwerkstattwien4',
-      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      sky: 'vienna/default_dark',
+
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -988,7 +989,8 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      sky: 'vienna/default_dark',
+
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
