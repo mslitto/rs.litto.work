@@ -690,13 +690,14 @@ export const artifacts: Artifact[] = [
     title: 'Medienwerkstatt Wien 1',
 
     config: {
-      sky: 'vienna/white',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       slug: 'medienwerkstattwien1',
 
       // "showVideoTime": true,
       frustumCulled: false,
+      // nosort: true,
       audio: 'rs_medienwerkstatt',
       mirrors: [
         {
@@ -749,7 +750,7 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
 
     config: {
-      sky: 'vienna/white',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -808,7 +809,7 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'vienna/white',
+      sky: 'vienna/default_dark',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -867,7 +868,7 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
     config: {
       slug: 'medienwerkstattwien4',
-      sky: 'vienna/white',
+      sky: 'vienna/default_dark',
 
       file: 'rs/avatar-no-animation',
       type: 28,
@@ -924,7 +925,7 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'vienna/white',
+      sky: 'vienna/default_dark',
 
       file: 'rs/avatar-no-animation',
       type: 28,
