@@ -563,7 +563,7 @@ export const artifacts: Artifact[] = [
   //   config: {
   //     slug: 'rs_justizpalast',
   //     frustumCulled: false,
-  //     sky: 'vienna/default_dark',
+  //     sky: 'vienna/white',
   //     // sky: 'lindabrunn/theothervillage',
   //     distance: -1,
   //     file: 'rs/justizpalast',
@@ -683,71 +683,6 @@ export const artifacts: Artifact[] = [
     },
   },
 
-  // {
-  //   title: 'Symposion Lindabrunn 3',
-  //   date: '2023-07-15',
-  //   lat: 47.9132,
-  //   lng: 16.1597,
-
-  //   config: {
-  //     slug: 'rs_lindabrunn_3',
-  //     frustumCulled: false,
-  //     sky: 'vienna/white',
-  //     // sky: 'lindabrunn/theothervillage',
-  //     distance: -1,
-  //     file: 'rs/lindabrunn_3',
-
-  //     ...camSettings,
-
-  //     video: true,
-
-  //     record3d: {
-  //       parentName: 'parent',
-  //       useBone: true,
-
-  //       filterSize: '0',
-  //       minDepth: '0.5',
-  //       maxDepth: '5.0',
-  //       depthThresholdFilter: '2.5',
-  //       scale: '3.0',
-  //       ptSize: '1',
-  //       zOffset: '0.0',
-
-  //       pixelDepth: '3.2',
-  //       depthScale: '1',
-  //       sizeAttenuation: '2.0',
-
-  //       permanentSeconds: [2, 9, 16, 20],
-  //     },
-  //     mirrors: [floorMirror],
-  //   },
-  // },
-
-  // {
-  //   title: 'AA Collection, Vienna',
-  //   date: '2023-06-21, 19:00',
-  //   lat: 48.1884,
-  //   lng: 16.3306,
-  // },
-  // {
-  //   title: 'VZA 7, Vienna',
-  //   date: '2023-06-27, 11:30',
-  //   lat: 48.2084,
-  //   lng: 16.3843,
-  // },
-  // {
-  //   title: 'MuseumsQuartier Raum D, Vienna',
-  //   date: '2023-06-28, 19:00',
-  //   lat: 48.2042,
-  //   lng: 16.3582,
-  // },
-  // {
-  //   title: 'MEDIENWERKSTATT, Vienna',
-  //   date: '2023-06-30, 19:30',
-  //   lat: 48.2016,
-  //   lng: 16.3491,
-  // },
-
   {
     date: '2024-05-10',
     lat: 48.2016,
@@ -755,7 +690,7 @@ export const artifacts: Artifact[] = [
     title: 'Medienwerkstatt Wien 1',
 
     config: {
-      sky: 'vienna/default_dark',
+      sky: 'vienna/white',
       file: 'rs/avatar-no-animation',
       type: 28,
       slug: 'medienwerkstattwien1',
@@ -814,7 +749,7 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
 
     config: {
-      sky: 'vienna/default_dark',
+      sky: 'vienna/white',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -873,7 +808,7 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'vienna/default_dark',
+      sky: 'vienna/white',
       file: 'rs/avatar-no-animation',
       type: 28,
       // "showVideoTime": true,
@@ -932,7 +867,7 @@ export const artifacts: Artifact[] = [
     lng: 16.3466,
     config: {
       slug: 'medienwerkstattwien4',
-      sky: 'vienna/default_dark',
+      sky: 'vienna/white',
 
       file: 'rs/avatar-no-animation',
       type: 28,
@@ -989,7 +924,7 @@ export const artifacts: Artifact[] = [
     lat: 48.2016,
     lng: 16.3466,
     config: {
-      sky: 'vienna/default_dark',
+      sky: 'vienna/white',
 
       file: 'rs/avatar-no-animation',
       type: 28,
