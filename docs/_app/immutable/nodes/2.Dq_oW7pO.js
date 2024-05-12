@@ -1,1 +1,0 @@
-import{P as m}from"../chunks/vendor.Dhg3Zp6M.js";export{m as component};
