@@ -68,6 +68,12 @@ export type Config = {
 
   clip?: boolean
   video?: boolean | string
+  videoDir?: string
+
+  type?: number
+
+  oscFile?: string
+  shadowPlane?: boolean
 
   record3d?: {
     parentName?: string
@@ -88,6 +94,8 @@ export type Config = {
     depthHueMultiplier?: string
     /* positive values move all pixels towards the camera */
     zOffset?: string
+
+    hueRedReducer?: string
 
     pixelDepth?: string
     depthScale?: string
@@ -117,6 +125,7 @@ export type Years = {
   2021: Artifact[]
   2022: Artifact[]
   2023: Artifact[]
+  2024: Artifact[]
 }
 
 const floorMirror: Mirror = {
@@ -738,9 +747,302 @@ export const artifacts: Artifact[] = [
   //   lat: 48.2016,
   //   lng: 16.3491,
   // },
+
+  {
+    date: '2024-05-10',
+    lat: 48.2016,
+    lng: 16.3466,
+    title: 'Medienwerkstatt Wien 1',
+
+    config: {
+      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      file: 'rs/avatar-no-animation',
+      type: 28,
+      slug: 'medienwerkstattwien1',
+
+      // "showVideoTime": true,
+      frustumCulled: false,
+      audio: 'rs_medienwerkstatt',
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+        filterSize: '0',
+        minDepth: '0.1',
+        maxDepth: '5.0',
+        depthThresholdFilter: '2.5',
+        scale: '1.5',
+        ptSize: '1.2',
+        zOffset: '0.0',
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+        hueRedReducer: '0.0',
+        permanentSeconds: [2.5, 6, 9.1],
+      },
+      oscFile: 'https://static.artificialmuseum.com/rs/2024/medienwerkstattwien1.txt',
+      video: true,
+      videoDir: 'rs/medienwerkstatt2024',
+      cam: {
+        y: 1.7,
+      },
+      lookAt: {
+        y: 1.7,
+      },
+      shadowPlane: false,
+    },
+  },
+  {
+    title: 'Medienwerkstatt Wien 2',
+
+    date: '2024-05-10',
+    lat: 48.2016,
+    lng: 16.3466,
+
+    config: {
+      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      file: 'rs/avatar-no-animation',
+      type: 28,
+      // "showVideoTime": true,
+      frustumCulled: false,
+      audio: 'rs_medienwerkstatt',
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+        filterSize: '0',
+        minDepth: '0.1',
+        maxDepth: '5.0',
+        depthThresholdFilter: '2.5',
+        scale: '1.5',
+        ptSize: '1.2',
+        zOffset: '0.0',
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+        hueRedReducer: '0.0',
+        permanentSeconds: [2.3, 4.8, 6.4, 10, 12],
+      },
+      slug: 'medienwerkstattwien2',
+
+      oscFile: 'https://static.artificialmuseum.com/rs/2024/medienwerkstattwien2.txt',
+      video: true,
+      videoDir: 'rs/medienwerkstatt2024',
+
+      cam: {
+        y: 1.7,
+      },
+      lookAt: {
+        y: 1.7,
+      },
+      shadowPlane: false,
+    },
+  },
+  {
+    title: 'Medienwerkstatt Wien 3',
+
+    date: '2024-05-10',
+    lat: 48.2016,
+    lng: 16.3466,
+    config: {
+      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      file: 'rs/avatar-no-animation',
+      type: 28,
+      // "showVideoTime": true,
+      frustumCulled: false,
+      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+        filterSize: '0',
+        minDepth: '0.1',
+        maxDepth: '5.0',
+        depthThresholdFilter: '2.5',
+        scale: '1.5',
+        ptSize: '1.2',
+        zOffset: '0.0',
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+        hueRedReducer: '0.0',
+        permanentSeconds: [1.6, 3, 4.6, 6],
+      },
+      slug: 'medienwerkstattwien3',
+
+      oscFile: 'https://static.artificialmuseum.com/rs/2024/medienwerkstattwien3.txt',
+      video: true,
+      videoDir: 'rs/medienwerkstatt2024',
+
+      cam: {
+        y: 1.7,
+      },
+      lookAt: {
+        y: 1.7,
+      },
+      shadowPlane: false,
+    },
+  },
+  {
+    title: 'Medienwerkstatt Wien 4',
+    date: '2024-05-10',
+    lat: 48.2016,
+    lng: 16.3466,
+    config: {
+      slug: 'medienwerkstattwien4',
+      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      file: 'rs/avatar-no-animation',
+      type: 28,
+      // "showVideoTime": true,
+      frustumCulled: false,
+      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+        filterSize: '0',
+        minDepth: '0.1',
+        maxDepth: '5.0',
+        depthThresholdFilter: '2.5',
+        scale: '1.5',
+        ptSize: '1.2',
+        zOffset: '0.0',
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+        hueRedReducer: '0.0',
+        permanentSeconds: [0.9, 4, 7.4],
+      },
+      oscFile: 'https://static.artificialmuseum.com/rs/2024/medienwerkstattwien4.txt',
+      video: true,
+      videoDir: 'rs/medienwerkstatt2024',
+
+      cam: {
+        y: 1.7,
+      },
+      lookAt: {
+        y: 1.7,
+      },
+      shadowPlane: false,
+    },
+  },
+  {
+    title: 'Medienwerkstatt Wien 5',
+    date: '2024-05-10',
+    lat: 48.2016,
+    lng: 16.3466,
+    config: {
+      sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
+      file: 'rs/avatar-no-animation',
+      type: 28,
+      // "showVideoTime": true,
+      frustumCulled: false,
+      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+        filterSize: '0',
+        minDepth: '0.1',
+        maxDepth: '5.0',
+        depthThresholdFilter: '2.5',
+        scale: '1.5',
+        ptSize: '1.2',
+        zOffset: '0.0',
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+        hueRedReducer: '0.0',
+        permanentSeconds: [2.7, 6.5, 10],
+      },
+      slug: 'medienwerkstattwien5',
+      oscFile: 'https://static.artificialmuseum.com/rs/2024/medienwerkstattwien5.txt',
+      video: true,
+      videoDir: 'rs/medienwerkstatt2024',
+
+      cam: {
+        y: 1.7,
+      },
+      lookAt: {
+        y: 1.7,
+      },
+      shadowPlane: false,
+    },
+  },
 ]
 
 export const years: Years = {
+  2024: artifacts.filter(a => a.date.startsWith('2024')),
   2023: artifacts.filter(a => a.date.startsWith('2023')),
   2022: artifacts.filter(a => a.date.startsWith('2022')),
   2021: artifacts.filter(a => a.date.startsWith('2021')),
