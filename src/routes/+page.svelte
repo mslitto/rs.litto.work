@@ -12,177 +12,28 @@
     TimeoutWarning,
   } from '$lib'
 
-  // import { onMount } from 'svelte'
+  import { onMount } from 'svelte'
 
-  // $: interactiveYears = years
+  $: interactiveYears = years
 
-  // const defaultArtifact = {
-  //   name: 'Medienwerkstatt Wien',
-  //   slug: 'medienwerkstatt',
-  //   date: '2024-05-10',
-  //   lat: 48.2016,
-  //   lng: 16.3466,
+  const tryRequest = async () => {
+    const jsUrl = 'https://live.artificialmuseum.com/data/echolot.js'
+    const response = await fetch(jsUrl)
 
-  //   config: {
-  //     sky: 'https://cdn.glitch.global/be631db3-54e6-4887-8d9b-d9f1e5207998/default_dark.jpg?v=1691842072552',
-  //     file: 'rs/avatar-no-animation',
+    if (response.status === 404) {
+      setTimeout(tryRequest, 1000)
+      return
+    }
 
-  //     type: 28,
+    const {artifacts} = await import(jsUrl)
+    console.log({ artifacts })
 
-  //     showVideoTime: true,
-  //     frustumCulled: false,
+    interactiveYears['2024'] = [...artifacts, ...interactiveYears['2024']]
+  }
 
-  //     audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
-
-  //     mirrors: [
-  //       {
-  //         type: 2,
-  //         params: [0.3, 32],
-  //         position: {
-  //           // x: 1,
-  //           z: 0,
-  //           y: 0.01,
-  //         },
-  //         rotation: {
-  //           x: 270,
-  //         },
-  //       },
-  //     ],
-
-  //     record3d: {
-  //       parentName: 'parent',
-  //       useBone: true,
-
-  //       loopVideo: false,
-  //       hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
-
-  //       filterSize: '0',
-  //       /* minimum distance of pixels in video that should be visible. */
-  //       minDepth: '0.1',
-  //       /* maximum depth of pixels in video that should be visible. */
-  //       maxDepth: '5.0',
-  //       /* in meters. Smaller values = more aggressive filtering */
-  //       depthThresholdFilter: '2.5',
-  //       /* scale of the artefact overall */
-  //       scale: '1.0',
-  //       /* the ptSize of single "pixels" of the artifact */
-  //       ptSize: '1.2',
-  //       /* defines the depth offset, multiplies depth texture hue */
-  //       // depthHueMultiplier: '3.0',
-  //       /* positive values move all pixels towards the camera */
-  //       zOffset: '0.0',
-
-  //       pixelDepth: '2.0',
-  //       depthScale: '1',
-  //       sizeAttenuation: '3.0',
-
-  //       hueRedReducer: '0.9',
-  //     },
-  //   },
-  // }
-
-  // const tryRequest = async () => {
-  //   const response = await fetch(
-  //     'https://live.artificialmuseum.com/getExistingFiles?path=video&type=mp4',
-  //   )
-
-  //   const data = await response.json()
-
-  //   const year = interactiveYears['2024'] || []
-
-  //   const tmpYear = []
-
-  //   if (Array.isArray(data) && data.length) {
-  //     let pushed = false
-
-  //     await Promise.all(
-  //       data.map(async (artifactName, i) => {
-  //         const id = artifactName.replace('.mp4', '')
-  //         const oscFile = `https://live.artificialmuseum.com/data/medienwerkstatt/${id}.txt`
-
-  //         const { artifact: onlineSettings } = await import(
-  //           `https://live.artificialmuseum.com/data/medienwerkstatt/medienwerkstatt-${id}.js`
-  //         )
-
-  //         const num = year.length + 1
-
-  //         const name = `Medienwerkstatt Wien ${num}`
-  //         const exists = year.find(a => a.config.oscFile === oscFile)
-
-  //         if (!exists) {
-  //           const item = {
-  //             ...defaultArtifact,
-  //             ...onlineSettings,
-  //             id,
-  //             name,
-  //             title: name,
-  //             config: {
-  //               ...defaultArtifact.config,
-
-  //               slug: name.toLowerCase(),
-
-  //               oscFile,
-  //               video: `https://live.artificialmuseum.com/data/video/${id}.mp4`,
-
-  //               cam: {
-  //                 y: 1.7,
-  //               },
-
-  //               lookAt: {
-  //                 y: 1.7,
-  //               },
-
-  //               record3d: {
-  //                 ...defaultArtifact.config.record3d,
-  //                 ...onlineSettings.config.record3d,
-
-  //                 loopVideo: false,
-  //                 hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
-
-  //                 scale: '1.5',
-  //                 ptSize: '1.2',
-  //                 filterSize: '0',
-  //                 minDepth: '0.1',
-  //                 maxDepth: '5.0',
-  //                 depthThresholdFilter: '2.5',
-  //                 zOffset: '0.0',
-
-  //                 pixelDepth: '2.0',
-  //                 depthScale: '1',
-  //                 sizeAttenuation: '3.0',
-
-  //                 hueRedReducer: '0.0',
-  //               },
-
-  //               shadowPlane: false,
-  //             },
-  //           }
-
-  //           tmpYear.push(item)
-  //           pushed = true
-  //         }
-  //       }),
-  //     )
-
-  //     if (pushed) {
-  //       // interactiveYears['2024'] = tmpYear
-  //       //   .sort((a, b) => (parseInt(a.id) < parseInt(b.id) ? -1 : 1))
-  //       //   .map((a, i) => {
-  //       //     a.name = `Medienwerkstatt Wien ${i + 1}`
-  //       //     a.title = a.name
-  //       //     return { ...a }
-  //       //   })
-
-  //       // console.log(JSON.stringify(interactiveYears['2024'], null, 2))
-  //     }
-  //   }
-
-  //   setTimeout(tryRequest, 1000)
-  // }
-
-  // onMount(() => {
-  //   tryRequest()
-  // })
+  onMount(() => {
+    tryRequest()
+  })
 </script>
 
 <Hero />
@@ -208,7 +59,7 @@
     smartphone.
   </div>
 
-  <ArtifactList {years} />
+  <ArtifactList years={interactiveYears} />
 
   <footer class="main">
     <p>
