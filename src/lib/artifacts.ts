@@ -814,7 +814,7 @@ export const artifacts: Artifact[] = [
       type: 28,
       // "showVideoTime": true,
       frustumCulled: false,
-      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      audio: 'rs_medienwerkstatt',
       mirrors: [
         {
           type: 2,
@@ -874,7 +874,7 @@ export const artifacts: Artifact[] = [
       type: 28,
       // "showVideoTime": true,
       frustumCulled: false,
-      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      audio: 'rs_medienwerkstatt',
       mirrors: [
         {
           type: 2,
@@ -931,7 +931,7 @@ export const artifacts: Artifact[] = [
       type: 28,
       // "showVideoTime": true,
       frustumCulled: false,
-      audio: 'https://live.artificialmuseum.com/data/medienwerkstatt.mp4',
+      audio: 'rs_medienwerkstatt',
       mirrors: [
         {
           type: 2,
