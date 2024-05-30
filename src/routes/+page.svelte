@@ -25,7 +25,7 @@
       return
     }
 
-    const {artifacts} = await import(jsUrl)
+    const { artifacts } = await import(jsUrl)
     console.log({ artifacts })
 
     interactiveYears['2024'] = [...artifacts, ...interactiveYears['2024']]

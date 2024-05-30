@@ -12,10 +12,10 @@
       // const { sandbox } = await import('http://localhost:8006/rs.js')
       init = sandbox
 
-    const onLoadObjectButtonClick = await init()
+      const onLoadObjectButtonClick = await init()
 
-    onLoadObjectButtonClick({ artifact: artifact.config, button: evt.target })()
-    } catch(e) {
+      onLoadObjectButtonClick({ artifact: artifact.config, button: evt.target })()
+    } catch (e) {
       console.log(e)
     }
   }
