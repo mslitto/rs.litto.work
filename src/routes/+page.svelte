@@ -59,6 +59,12 @@
     smartphone.
   </div>
 
+  <div class="credits">
+    <p>Concept: <a href="https://litto.work/">Litto / Daniela Weiss</a></p>
+    <p>Sound: <a href="http://www.lyricallumen.com/">Manuel Cyrill Bachinger</a></p>
+    <p>Programming: <a href="https://jaeh.at/">Jascha Ehrenreich</a></p>
+  </div>
+
   <ArtifactList years={interactiveYears} />
 
   <footer class="main">
@@ -82,6 +88,10 @@
 </div>
 
 <style lang="scss">
+  .credits {
+    margin: 1rem 0 0;
+  }
+
   footer {
     --link-color: rgb(92, 92, 92);
     font-size: 0.7em;
