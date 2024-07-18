@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { STATIC_URL } from '$lib/URLS'
+  import { STATIC_URL } from '$lib/URLS.js'
 
   import { portal } from './Portal.svelte'
 </script>
