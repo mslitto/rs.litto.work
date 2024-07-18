@@ -45,3 +45,9 @@
 #timeout-warning-header-done {
   display: none;
 }
+
+#hud .visible {
+  display: block !important;
+  opacity: 1 !important;
+  transition: opacity 500ms;
+}
