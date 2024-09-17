@@ -12,28 +12,28 @@
     TimeoutWarning,
   } from '$lib'
 
-  import { onMount } from 'svelte'
+  // import { onMount } from 'svelte'
 
   $: interactiveYears = years
 
-  const tryRequest = async () => {
-    const jsUrl = 'https://live.artificialmuseum.com/data/echolot.js'
-    const response = await fetch(jsUrl)
+  // const tryRequest = async () => {
+  //   const jsUrl = 'https://live.artificialmuseum.com/data/echolot.js'
+  //   const response = await fetch(jsUrl)
 
-    if (response.status === 404) {
-      setTimeout(tryRequest, 1000)
-      return
-    }
+  //   if (response.status === 404) {
+  //     setTimeout(tryRequest, 1000)
+  //     return
+  //   }
 
-    const { artifacts } = await import(jsUrl)
-    console.log({ artifacts })
+  //   const { artifacts } = await import(jsUrl)
+  //   console.log({ artifacts })
 
-    interactiveYears['2024'] = [...artifacts, ...interactiveYears['2024']]
-  }
+  //   interactiveYears['2024'] = [...artifacts, ...interactiveYears['2024']]
+  // }
 
-  onMount(() => {
-    tryRequest()
-  })
+  // onMount(() => {
+  //   tryRequest()
+  // })
 </script>
 
 <Hero />

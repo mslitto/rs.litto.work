@@ -977,6 +977,85 @@ export const artifacts: Artifact[] = [
       shadowPlane: false,
     },
   },
+
+  {
+    title: 'Echolot 1',
+
+    date: '2024-05-30',
+    lat: 48.1715,
+    lng: 16.3892,
+
+    config: {
+      sky: 'https://static.artificialmuseum.com/skybox/vienna/default_dark.jpg',
+      file: 'rs/avatar-no-animation',
+
+      type: 28,
+
+      frustumCulled: false,
+
+      slug: 'echolot1',
+      oscFile: 'https://live.artificialmuseum.com/data/echolot.txt',
+      video: 'https://live.artificialmuseum.com/data/video/1717091006259.mp4',
+
+      cam: {
+        y: 1.7,
+      },
+
+      lookAt: {
+        y: 1.7,
+      },
+
+      shadowPlane: false,
+
+      mirrors: [
+        {
+          type: 2,
+          params: [0.3, 32],
+          position: {
+            // x: 1,
+            z: 0,
+            y: 0.01,
+          },
+          rotation: {
+            x: 270,
+          },
+        },
+      ],
+
+      record3d: {
+        parentName: 'parent',
+        useBone: true,
+
+        loopVideo: false,
+        hideModelsOnVideoEnded: ['glass', 'mirror', 'body', 'bottom'],
+
+        filterSize: '0',
+        /* minimum distance of pixels in video that should be visible. */
+        minDepth: '0.1',
+        /* maximum depth of pixels in video that should be visible. */
+        maxDepth: '5.0',
+        /* in meters. Smaller values = more aggressive filtering */
+        depthThresholdFilter: '2.5',
+        /* scale of the artefact overall */
+        scale: '1.5',
+        /* the ptSize of single "pixels" of the artifact */
+        ptSize: '1.2',
+        /* defines the depth offset, multiplies depth texture hue */
+        // depthHueMultiplier: '3.0',
+        /* positive values move all pixels towards the camera */
+        zOffset: '0.0',
+
+        pixelDepth: '2.0',
+        depthScale: '1',
+        sizeAttenuation: '3.0',
+
+        hueRedReducer: '0.0',
+
+        permanentSeconds: [10, 20, 30, 40, 50],
+      },
+    },
+  },
+
 ]
 
 export const years: Years = {
